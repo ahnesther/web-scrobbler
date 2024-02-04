@@ -99,6 +99,14 @@ const monochromeColors = {
 		light: '#d51107',
 		dark: '#fc3434',
 	},
+	'action_love.svg': {
+		light: '#d51107',
+		dark: '#fc3434',
+	},
+	'action_unlove.svg': {
+		light: '#d51107',
+		dark: '#fc3434',
+	},
 };
 
 /**

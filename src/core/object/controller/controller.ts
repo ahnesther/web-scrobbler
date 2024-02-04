@@ -50,6 +50,8 @@ export const isPrioritizedMode: Partial<Record<ControllerModeStr, true>> = {
 	[ControllerMode.Unknown]: true,
 	[ControllerMode.Ignored]: true,
 	[ControllerMode.Err]: true,
+	[ControllerMode.Love]: true,
+	[ControllerMode.Unlove]: true,
 };
 
 type updateEvent = {
@@ -556,6 +558,13 @@ export default class Controller {
 		this.currentSong.setLoveStatus(isLoved, true);
 		this.onSongUpdated();
 		try {
+			if (isLoved) {
+				console.log('Set song as loved');
+				this.setMode(ControllerMode.Love);
+			} else {
+				console.log('Set song as unloved');
+				this.setMode(ControllerMode.Unlove);
+			}
 			await sendContentMessage({
 				type: 'toggleLove',
 				payload: {

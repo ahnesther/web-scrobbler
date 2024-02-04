@@ -52,3 +52,13 @@ export const Unknown = 'Unknown';
  * Site is unsupported.
  */
 export const Unsupported = 'Unsupported';
+
+/**
+ * A user loved a song.
+ */
+export const Love = 'Loved';
+
+/**
+ * A user unloved a song.
+ */
+export const Unlove = 'Unloved';
